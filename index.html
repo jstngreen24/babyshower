@@ -11,7 +11,6 @@
       --green: #5f8f62;
       --green-dark: #315c37;
       --blush: #fde2e4;
-      --pink: #f9c6cc;
       --cream: #fffaf5;
       --text: #2c3a2f;
       --muted: #6b7280;
@@ -67,23 +66,13 @@
       margin: 10px auto 20px;
     }
 
-    .cards {
-      display: grid;
-      gap: 18px;
+    .section {
       margin-top: 25px;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    }
-
-    .card {
       background: white;
-      border-radius: 20px;
-      padding: 22px;
-      box-shadow: var(--shadow);
+      border-radius: 25px;
+      padding: 25px;
       text-align: center;
-    }
-
-    .card h2 {
-      margin-bottom: 8px;
+      box-shadow: var(--shadow);
     }
 
     .btn {
@@ -101,18 +90,9 @@
       transform: translateY(-2px);
     }
 
+    .venmo { background: #3d95ce; }
     .amazon { background: #7c9cff; }
     .walmart { background: #48b57a; }
-    .venmo { background: #3d95ce; }
-
-    .section {
-      margin-top: 25px;
-      background: white;
-      border-radius: 25px;
-      padding: 25px;
-      text-align: center;
-      box-shadow: var(--shadow);
-    }
 
     .qr {
       max-width: 230px;
@@ -120,10 +100,19 @@
       border-radius: 12px;
     }
 
-    .note {
-      margin-top: 20px;
-      font-size: 0.95rem;
-      color: var(--muted);
+    .cards {
+      display: grid;
+      gap: 18px;
+      margin-top: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+      text-align: center;
     }
 
     footer {
@@ -132,10 +121,6 @@
       font-weight: 600;
       color: var(--green-dark);
     }
-
-    .emoji {
-      font-size: 1.5rem;
-    }
   </style>
 </head>
 
@@ -143,7 +128,6 @@
   <main class="container">
 
     <section class="hero">
-      <div class="emoji">🌸👶💖</div>
 
       <div class="name">Brookie Green</div>
       <div class="girl">It’s a Girl 💕</div>
@@ -155,23 +139,9 @@
         Thank you for your love and support!
       </p>
 
-      <div class="cards">
-        <div class="card">
-          <h2>Amazon Registry</h2>
-          <a class="btn amazon"
-            href="https://www.amazon.com/baby-reg/brookie-green-august-2026-thatcher/2TOFJDGUUG4NX?ref_=cm_sw_r_cp_ud_dp_KGRDEMD7QFQE9E6X50KZ"
-            target="_blank">View Amazon</a>
-        </div>
-
-        <div class="card">
-          <h2>Walmart Registry</h2>
-          <a class="btn walmart"
-            href="https://www.walmart.com/registry/BR/0dd35a6e-e24a-4aa3-8718-8cf38766e9a1"
-            target="_blank">View Walmart</a>
-        </div>
-      </div>
     </section>
 
+    <!-- VENMO FIRST -->
     <section class="section">
       <h2>💸 Send a Gift via Venmo</h2>
 
@@ -185,19 +155,32 @@
 
       <img src="venmo.png" alt="Venmo QR Code" class="qr">
 
-      <div class="note">@BrookieGreen</div>
+      <p><strong>@BrookieGreen</strong></p>
     </section>
 
+    <!-- REGISTRIES -->
     <section class="section">
-      <h2>💌 A little note</h2>
-      <p class="note">
-        We truly appreciate all the love and support as we prepare for our baby girl.
-        Gifts are never expected — your kindness means everything to us 💖
-      </p>
+      <h2>🛍️ Registries</h2>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Amazon</h3>
+          <a class="btn amazon"
+            href="https://www.amazon.com/baby-reg/brookie-green-august-2026-thatcher/2TOFJDGUUG4NX?ref_=cm_sw_r_cp_ud_dp_KGRDEMD7QFQE9E6X50KZ"
+            target="_blank">View Amazon</a>
+        </div>
+
+        <div class="card">
+          <h3>Walmart</h3>
+          <a class="btn walmart"
+            href="https://www.walmart.com/registry/BR/0dd35a6e-e24a-4aa3-8718-8cf38766e9a1"
+            target="_blank">View Walmart</a>
+        </div>
+      </div>
     </section>
 
     <footer>
-      Thank you for growing with the Green family 🌿✨
+      Thank you for celebrating with us 💖
     </footer>
 
   </main>
